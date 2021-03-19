@@ -1,6 +1,8 @@
 # Logs
 *.log
 npm-debug.log
+package-lock.json
+yarn.lock
 
 # Dependency directory
 node_modules
@@ -10,3 +12,4 @@ tmp
 
 # Examples (If applicable to your project)
 examples
+media
