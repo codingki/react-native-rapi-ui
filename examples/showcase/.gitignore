@@ -10,6 +10,6 @@ npm-debug.*
 web-build/
 package-lock.json
 yarn.lock
-
+src/rapi
 # macOS
 .DS_Store

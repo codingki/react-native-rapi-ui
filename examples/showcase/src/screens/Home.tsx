@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
-import { Layout, TopNav, Text, theme } from '../rapi';
+import { Layout, TopNav, Text, theme, Button } from 'react-native-rapi-ui';
 import { Ionicons } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { StackScreenProps } from '@react-navigation/stack';

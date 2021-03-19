@@ -1,7 +1,6 @@
 import React from 'react';
-import { ScrollView, StyleSheet, View, Image } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import {
-	Avatar,
 	Layout,
 	Section,
 	SectionContent,
@@ -9,7 +8,7 @@ import {
 	Text,
 	theme,
 	TopNav,
-} from '../rapi';
+} from 'react-native-rapi-ui';
 import { StackScreenProps } from '@react-navigation/stack';
 import { MainStackParamList } from '../types/navigation';
 import { Ionicons } from '@expo/vector-icons';
