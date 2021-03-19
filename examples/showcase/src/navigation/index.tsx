@@ -6,7 +6,8 @@ import Buttons from '../screens/Buttons';
 import Colors from '../screens/Colors';
 import Forms from '../screens/Forms';
 import Typography from '../screens/Typography';
-import Nice from '../screens/Nice';
+import Section from '../screens/Section';
+import Avatar from '../screens/Avatar';
 
 const MainStack = createStackNavigator();
 const Main = () => {
@@ -37,7 +38,8 @@ const Main = () => {
 				<MainStack.Screen name="Buttons" component={Buttons} />
 				<MainStack.Screen name="Colors" component={Colors} />
 				<MainStack.Screen name="Forms" component={Forms} />
-				<MainStack.Screen name="Nice" component={Nice} />
+				<MainStack.Screen name="Section" component={Section} />
+				<MainStack.Screen name="Avatar" component={Avatar} />
 			</MainStack.Navigator>
 		</NavigationContainer>
 	);

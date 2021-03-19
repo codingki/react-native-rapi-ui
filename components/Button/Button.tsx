@@ -182,7 +182,7 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
 
 	if (props.type === 'TouchableWithoutFeedback') {
 		return (
-			<TouchableWithoutFeedback {...buttonProp}>
+			<TouchableWithoutFeedback {...buttonProp} disabled={disabled}>
 				<View
 					style={{
 						...style,
@@ -209,6 +209,7 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
 		return (
 			<TouchableHighlight
 				{...buttonProp}
+				disabled={disabled}
 				style={{
 					...style,
 					...containerStyle,
@@ -232,6 +233,7 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
 	return (
 		<TouchableOpacity
 			{...buttonProp}
+			disabled={disabled}
 			style={{
 				...style,
 				...containerStyle,

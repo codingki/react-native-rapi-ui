@@ -9,7 +9,9 @@ import {
 	CheckBox,
 	RadioButton,
 	theme,
-} from 'react-native-rapi-ui';
+	SectionContent,
+	Section,
+} from '../rapi';
 import { Ionicons } from '@expo/vector-icons';
 import { StackScreenProps } from '@react-navigation/stack';
 import { MainStackParamList } from '../types/navigation';
@@ -40,70 +42,64 @@ export default function ({
 				middleContent="Forms"
 			/>
 			<ScrollView>
-				<View
-					style={{
-						marginHorizontal: 20,
-						marginTop: 20,
-						padding: 20,
-						backgroundColor: 'white',
-						borderRadius: 10,
-					}}
-				>
-					<View style={{ marginBottom: 20 }}>
-						<Text style={{ marginBottom: 10 }}>TextInput</Text>
+				<Section style={{ marginHorizontal: 20, marginTop: 20 }}>
+					<SectionContent>
+						<View style={{ marginBottom: 20 }}>
+							<Text style={{ marginBottom: 10 }}>TextInput</Text>
 
-						<TextInput
-							placeholder="Enter your text"
-							value={text}
-							onChangeText={(val) => setText(val)}
-						/>
-					</View>
-					<View style={{ marginBottom: 20 }}>
-						<Text style={{ marginBottom: 10 }}>TextInput with leftContent</Text>
+							<TextInput
+								placeholder="Enter your text"
+								value={text}
+								onChangeText={(val) => setText(val)}
+							/>
+						</View>
+						<View style={{ marginBottom: 20 }}>
+							<Text style={{ marginBottom: 10 }}>
+								TextInput with leftContent
+							</Text>
 
-						<TextInput
-							placeholder="Enter your password"
-							value={pass}
-							onChangeText={(val) => setPass(val)}
-							leftContent={
-								<Ionicons name="lock-closed" size={20} color={theme.gray300} />
-							}
-						/>
-					</View>
-					<View>
-						<Text style={{ marginBottom: 10 }}>
-							TextInput with rightContent
-						</Text>
+							<TextInput
+								placeholder="Enter your password"
+								value={pass}
+								onChangeText={(val) => setPass(val)}
+								leftContent={
+									<Ionicons
+										name="lock-closed"
+										size={20}
+										color={theme.gray300}
+									/>
+								}
+							/>
+						</View>
+						<View>
+							<Text style={{ marginBottom: 10 }}>
+								TextInput with rightContent
+							</Text>
 
-						<TextInput
-							placeholder="Enter your email"
-							value={email}
-							onChangeText={(val) => setEmail(val)}
-							rightContent={
-								<Ionicons name="mail" size={20} color={theme.gray300} />
-							}
-						/>
-					</View>
-				</View>
-				<View
-					style={{
-						marginHorizontal: 20,
-						marginTop: 20,
-						padding: 20,
-						backgroundColor: 'white',
-						borderRadius: 10,
-					}}
-				>
-					<View>
-						<Text style={{ marginBottom: 10 }}>Picker</Text>
-						<Picker
-							items={items}
-							value={value}
-							placeholder="Choose your role"
-							onValueChange={(val) => setValue(val)}
-						/>
-					</View>
-				</View>
+							<TextInput
+								placeholder="Enter your email"
+								value={email}
+								onChangeText={(val) => setEmail(val)}
+								rightContent={
+									<Ionicons name="mail" size={20} color={theme.gray300} />
+								}
+							/>
+						</View>
+					</SectionContent>
+				</Section>
+				<Section style={{ marginHorizontal: 20, marginTop: 20 }}>
+					<SectionContent>
+						<View>
+							<Text style={{ marginBottom: 10 }}>Picker</Text>
+							<Picker
+								items={items}
+								value={value}
+								placeholder="Choose your role"
+								onValueChange={(val) => setValue(val)}
+							/>
+						</View>
+					</SectionContent>
+				</Section>
 				<View
 					style={{
 						marginHorizontal: 20,
@@ -126,29 +122,24 @@ export default function ({
 						</View>
 					</View>
 				</View>
-				<View
-					style={{
-						marginHorizontal: 20,
-						marginTop: 20,
-						marginBottom: 20,
-						padding: 20,
-						backgroundColor: 'white',
-						borderRadius: 10,
-					}}
+				<Section
+					style={{ marginHorizontal: 20, marginTop: 20, marginBottom: 20 }}
 				>
-					<View>
-						<Text style={{ marginBottom: 10 }}>RadioButton</Text>
-						<View style={{ flexDirection: 'row', alignItems: 'center' }}>
-							<RadioButton
-								value={RadioToggle}
-								onValueChange={(val) => setRadioToggle(val)}
-							/>
-							<Text size="md" style={{ marginLeft: 10, color: 'gray' }}>
-								I agree with the Terms & Conditions
-							</Text>
+					<SectionContent>
+						<View>
+							<Text style={{ marginBottom: 10 }}>RadioButton</Text>
+							<View style={{ flexDirection: 'row', alignItems: 'center' }}>
+								<RadioButton
+									value={RadioToggle}
+									onValueChange={(val) => setRadioToggle(val)}
+								/>
+								<Text size="md" style={{ marginLeft: 10, color: 'gray' }}>
+									I agree with the Terms & Conditions
+								</Text>
+							</View>
 						</View>
-					</View>
-				</View>
+					</SectionContent>
+				</Section>
 			</ScrollView>
 		</Layout>
 	);

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, TextProps, TextStyle } from 'react-native';
+import { theme } from '../../constants/colors';
 import { fontSize, normal, italic } from '../../constants/typography';
 
 interface Props extends TextProps {
@@ -7,6 +8,7 @@ interface Props extends TextProps {
 	italic?: boolean;
 	size?: keyof typeof fontSize;
 	style?: TextStyle;
+	status?: 'primary' | 'success' | 'warning' | 'info' | 'danger';
 }
 
 const StyledText: React.FC<Props> = (props: Props) => {
@@ -39,6 +41,7 @@ const StyledText: React.FC<Props> = (props: Props) => {
 				...props.style,
 				fontFamily: font(),
 				fontSize: size(),
+				color: props.status ? theme[props.status] : theme.black,
 			}}
 		/>
 	);

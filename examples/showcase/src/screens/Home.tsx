@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
-import { Layout, TopNav, Text, theme } from 'react-native-rapi-ui';
+import { Layout, TopNav, Text, theme } from '../rapi';
 import { Ionicons } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { StackScreenProps } from '@react-navigation/stack';
@@ -34,6 +34,18 @@ export default function ({
 				<TouchableOpacity onPress={() => navigation.navigate('Forms')}>
 					<View style={styles.listItem}>
 						<Text fontWeight="medium">Forms</Text>
+						<Ionicons name="chevron-forward" size={20} color={theme.black} />
+					</View>
+				</TouchableOpacity>
+				<TouchableOpacity onPress={() => navigation.navigate('Section')}>
+					<View style={styles.listItem}>
+						<Text fontWeight="medium">Section</Text>
+						<Ionicons name="chevron-forward" size={20} color={theme.black} />
+					</View>
+				</TouchableOpacity>
+				<TouchableOpacity onPress={() => navigation.navigate('Avatar')}>
+					<View style={styles.listItem}>
+						<Text fontWeight="medium">Avatar</Text>
 						<Ionicons name="chevron-forward" size={20} color={theme.black} />
 					</View>
 				</TouchableOpacity>

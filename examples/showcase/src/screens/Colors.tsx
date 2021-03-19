@@ -1,7 +1,7 @@
 import { StackScreenProps } from '@react-navigation/stack';
 import React from 'react';
 import { ScrollView, View } from 'react-native';
-import { Layout, TopNav, Text, theme } from 'react-native-rapi-ui';
+import { Layout, TopNav, Text, theme } from '../../src/rapi';
 import { Ionicons } from '@expo/vector-icons';
 import ColorCard from '../components/ColorCard';
 import { MainStackParamList } from '../types/navigation';

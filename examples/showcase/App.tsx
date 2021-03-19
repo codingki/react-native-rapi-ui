@@ -1,5 +1,5 @@
 import React from 'react';
-import { useCachedResources } from 'react-native-rapi-ui';
+import { useCachedResources } from './src/rapi';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Navigator from './src/navigation';
 import { enableScreens } from 'react-native-screens';
