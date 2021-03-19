@@ -41,7 +41,11 @@ const StyledText: React.FC<Props> = (props: Props) => {
 				...props.style,
 				fontFamily: font(),
 				fontSize: size(),
-				color: props.status ? theme[props.status] : theme.black,
+				color: props.status
+					? theme[props.status]
+					: props.style?.color
+					? props.style?.color
+					: theme.black,
 			}}
 		/>
 	);

@@ -24,21 +24,36 @@ interface Props extends ViewProps {
 	middleTextStyle?: TextStyle;
 }
 
-const TopNav: React.FC<Props> = (props: Props) => {
+const TopNav: React.FC<Props> = ({
+	height = 64,
+	backgroundColor = colors.topNav.backgroundColor,
+	borderColor = colors.topNav.borderColor,
+	leftAction,
+	middleAction,
+	rightAction,
+	leftContent,
+	middleContent,
+	rightContent,
+	leftTextStyle,
+	rightTextStyle,
+	middleTextStyle,
+	...rest
+}) => {
 	return (
 		<View
+			{...rest}
 			style={{
-				height: props.height || 64,
+				height: height,
 				flexDirection: 'row',
 				justifyContent: 'space-between',
-				backgroundColor: props.backgroundColor || colors.topNav.backgroundColor,
+				backgroundColor: backgroundColor,
 				alignItems: 'center',
-				borderColor: props.borderColor || colors.topNav.borderColor,
+				borderColor: borderColor,
 				borderBottomWidth: 1,
 			}}
 		>
 			<TouchableOpacity
-				onPress={props.leftAction}
+				onPress={leftAction}
 				style={{
 					flex: 1,
 					alignItems: 'flex-start',
@@ -52,17 +67,17 @@ const TopNav: React.FC<Props> = (props: Props) => {
 						justifyContent: 'center',
 					}}
 				>
-					{typeof props.leftContent == 'string' ? (
-						<Text style={props.leftTextStyle} fontWeight="bold" size="lg">
-							{props.leftContent}
+					{typeof leftContent == 'string' ? (
+						<Text style={leftTextStyle} fontWeight="bold" size="lg">
+							{leftContent}
 						</Text>
 					) : (
-						props.leftContent
+						leftContent
 					)}
 				</View>
 			</TouchableOpacity>
 			<Pressable
-				onPress={props.middleAction}
+				onPress={middleAction}
 				style={{
 					flex: 4,
 					alignItems: 'center',
@@ -77,17 +92,17 @@ const TopNav: React.FC<Props> = (props: Props) => {
 						justifyContent: 'center',
 					}}
 				>
-					{typeof props.middleContent == 'string' ? (
-						<Text style={props.middleTextStyle} fontWeight="bold" size="lg">
-							{props.middleContent}
+					{typeof middleContent == 'string' ? (
+						<Text style={middleTextStyle} fontWeight="bold" size="lg">
+							{middleContent}
 						</Text>
 					) : (
-						props.middleContent
+						middleContent
 					)}
 				</View>
 			</Pressable>
 			<TouchableOpacity
-				onPress={props.rightAction}
+				onPress={rightAction}
 				style={{
 					flex: 1,
 					alignItems: 'flex-end',
@@ -101,12 +116,12 @@ const TopNav: React.FC<Props> = (props: Props) => {
 						justifyContent: 'center',
 					}}
 				>
-					{typeof props.rightContent == 'string' ? (
-						<Text style={props.rightTextStyle} fontWeight="bold" size="lg">
-							{props.rightContent}
+					{typeof rightContent == 'string' ? (
+						<Text style={rightTextStyle} fontWeight="bold" size="lg">
+							{rightContent}
 						</Text>
 					) : (
-						props.rightContent
+						rightContent
 					)}
 				</View>
 			</TouchableOpacity>

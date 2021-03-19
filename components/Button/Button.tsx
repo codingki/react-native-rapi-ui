@@ -159,6 +159,8 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
 
 	const selectedInverseColor = inverseColor
 		? inverseColor
+		: status
+		? theme.white
 		: styles[size || 'lg'].buttonInverseColor;
 
 	const containerStyle = outline
