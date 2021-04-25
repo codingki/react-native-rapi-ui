@@ -6,7 +6,7 @@
 
 [Demo](https://expo.io/@kidingki/projects/react-native-rapi-ui-showcase)
 
-[Example](https://github.com/codingki/react-native-rapi-ui/examples/showcase)
+[Example](https://github.com/codingki/react-native-rapi-ui/tree/master/examples/showcase)
 
 ## Components
 
