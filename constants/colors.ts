@@ -1,4 +1,4 @@
-import theme from './theme.json';
+import themeColor from './theme.json';
 import component from './componentColors';
 
-export { theme, component };
+export { themeColor, component };

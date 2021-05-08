@@ -1,37 +1,41 @@
-import React from 'react';
-import { View, ViewProps, Image } from 'react-native';
-import { theme } from '../../constants/colors';
+import React from "react";
+import { View, ViewProps, Image } from "react-native";
+import { component, themeColor } from "../../constants/colors";
+import { useTheme } from "../../provider/ThemeProvider";
 
 interface Props extends ViewProps {
-	children?: React.ReactNode;
-	backgroundColor?: string;
+  children?: React.ReactNode;
+  backgroundColor?: string;
 
-	borderRadius?: number;
+  borderRadius?: number;
 }
 
 const Section: React.FC<Props> = ({
-	backgroundColor = theme.white,
-	borderRadius = 10,
-	children,
-	style,
-	...rest
+  backgroundColor,
+  borderRadius = 10,
+  children,
+  style,
+  ...otherProps
 }) => {
-	return (
-		<View
-			{...rest}
-			style={[
-				style,
-				{
-					flexDirection: 'column',
-					backgroundColor: backgroundColor,
-					borderRadius: borderRadius,
-					overflow: 'hidden',
-				},
-			]}
-		>
-			{children}
-		</View>
-	);
+  const { theme } = useTheme();
+  return (
+    <View
+      {...otherProps}
+      style={[
+        style,
+        {
+          flexDirection: "column",
+          backgroundColor: backgroundColor
+            ? backgroundColor
+            : component[theme].section.backgroundColor,
+          borderRadius: borderRadius,
+          overflow: "hidden",
+        },
+      ]}
+    >
+      {children}
+    </View>
+  );
 };
 
 export default Section;
