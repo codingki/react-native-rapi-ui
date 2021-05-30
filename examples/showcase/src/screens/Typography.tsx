@@ -1,6 +1,6 @@
 import React from "react";
 import { ScrollView } from "react-native";
-import { Layout, TopNav, themeColor, useTheme } from "../rapi";
+import { Layout, TopNav, themeColor, useTheme } from "react-native-rapi-ui";
 import TypograpnyCard from "../components/TypographyCard";
 import { Ionicons } from "@expo/vector-icons";
 import { MainStackParamList } from "../types/navigation";

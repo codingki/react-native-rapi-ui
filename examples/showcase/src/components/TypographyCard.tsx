@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "react-native";
-import { Section, SectionContent, Text } from "../rapi";
-import { fontSize } from "../rapi/constants/typography";
+import { Section, SectionContent, Text } from "react-native-rapi-ui";
+import { fontSize } from "react-native-rapi-ui/constants/typography";
 interface Props {
   size?: keyof typeof fontSize;
 }

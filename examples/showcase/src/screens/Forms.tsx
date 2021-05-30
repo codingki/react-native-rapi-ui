@@ -12,7 +12,7 @@ import {
   SectionContent,
   Section,
   useTheme,
-} from "../rapi";
+} from "react-native-rapi-ui";
 import { Ionicons } from "@expo/vector-icons";
 import { StackScreenProps } from "@react-navigation/stack";
 import { MainStackParamList } from "../types/navigation";

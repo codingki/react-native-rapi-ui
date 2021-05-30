@@ -9,7 +9,7 @@ import {
   themeColor,
   TopNav,
   useTheme,
-} from "../rapi";
+} from "react-native-rapi-ui";
 import { StackScreenProps } from "@react-navigation/stack";
 import { MainStackParamList } from "../types/navigation";
 import { Ionicons } from "@expo/vector-icons";

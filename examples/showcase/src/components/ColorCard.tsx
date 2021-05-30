@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import { Text, themeColor, useTheme } from "../rapi";
+import { Text, themeColor, useTheme } from "react-native-rapi-ui";
 
 interface Props {
   color: keyof typeof themeColor;
