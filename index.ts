@@ -1,5 +1,5 @@
 import useCachedResources from './hooks/useCachedResources';
 import { themeColor } from './constants/colors';
-export * from './provider/ThemeProvider'
+export * from './provider/ThemeProvider';
 export * from './components';
-export { useCachedResources, themeColor };
+export { themeColor };
