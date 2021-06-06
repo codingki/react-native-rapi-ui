@@ -19,7 +19,14 @@ const ThemeContext = React.createContext<ContextProps>({
 
 const useTheme = () => React.useContext(ThemeContext);
 
-const ThemeProvider: React.FC<ContextProps> = (props) => {
+const ThemeProvider = (props: {
+  theme?: "light" | "dark";
+  isDarkmode?: boolean;
+  images?: Array<any> | null;
+  fonts?: any;
+  children?: React.ReactNode;
+  loading?: React.ReactNode;
+}) => {
   const [theme, setTheme] = React.useState<"light" | "dark">(
     props.theme || "light"
   );
@@ -27,17 +34,21 @@ const ThemeProvider: React.FC<ContextProps> = (props) => {
   const isDarkmode = theme === "dark";
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme, isDarkmode }}>
+    <ThemeContext.Provider value={{ theme, isDarkmode, setTheme }}>
       <StatusBar
         backgroundColor={component[theme].statusBar.color}
         barStyle={isDarkmode ? "light-content" : "dark-content"}
       />
       <SafeAreaProvider
         style={{
-          backgroundColor: isDarkmode ? "#191921" : themeColor.white100,
+          backgroundColor: isDarkmode ? themeColor.dark : themeColor.white100,
         }}
       >
-        {!isLoadingComplete ? null : props.children}
+        {!isLoadingComplete
+          ? props.loading
+            ? props.loading
+            : null
+          : props.children}
       </SafeAreaProvider>
     </ThemeContext.Provider>
   );

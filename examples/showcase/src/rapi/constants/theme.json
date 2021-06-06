@@ -98,5 +98,9 @@
 	"gray500": "#6c6c6c",
 	"white": "#FFFFFF",
 	"white100": "#f7f7f7",
-	"white200": "#e6e6e6"
+	"white200": "#e6e6e6",
+	"dark" : "#191921",
+	"dark100": "#383b4d",
+	"dark200": "#262834"
+
 }

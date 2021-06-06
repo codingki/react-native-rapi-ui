@@ -5,7 +5,6 @@ import {
   TopNav,
   Text,
   themeColor,
-  Button,
   useTheme,
 } from "react-native-rapi-ui";
 import { Ionicons } from "@expo/vector-icons";
@@ -39,7 +38,7 @@ export default function ({
           <Ionicons
             name={isDarkmode ? "sunny" : "moon"}
             size={20}
-            color={isDarkmode ? themeColor.white100 : "#191921"}
+            color={isDarkmode ? themeColor.white100 : themeColor.dark}
           />
         }
         rightAction={() => {
