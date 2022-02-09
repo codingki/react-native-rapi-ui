@@ -1,0 +1,22 @@
+{
+  "name": "react-native-rapi-ui-example",
+  "displayName": "RapiUi Example",
+  "expo": {
+    "name": "react-native-rapi-ui-example",
+    "slug": "react-native-rapi-ui-example",
+    "description": "Example app for react-native-rapi-ui",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
