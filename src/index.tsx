@@ -1,3 +1,3 @@
-export function multiply(a: number, b: number): Promise<number> {
-  return Promise.resolve(a * b);
-}
+export * from './provider/ThemeProvider';
+export * from './components';
+export { themeColor } from './constants/colors';
